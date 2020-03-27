@@ -1,0 +1,40 @@
+.button-hide-area {
+  position: relative;
+  background-image: url("../resourses/Concept_0006_07.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30em;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.button-hide-area:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  height: 100%;
+  background: #6e431e85;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.button-hide-area button {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  letter-spacing: 1px;
+  border: none;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background: radial-gradient(#b3554b, #ec4330);
+  z-index: 100;
+}
+
+.button-hide-area button:focus {
+  outline: transparent;
+}

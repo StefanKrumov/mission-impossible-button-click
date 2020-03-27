@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,500,500i,700,700i|Fira+Sans:300,300i,400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext");
+
+@font-face {
+  font-family: "impossible_-_0regular";
+  src: url("./fonts/impossible.regular-webfont.woff2") format("woff2"),
+    url("./fonts/impossible.regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OPTIAgency-Gothic";
+  src: url("./fonts/OPTIAgency-Gothic.ttf.woff") format("woff"),
+    url("./fonts/OPTIAgency-Gothic.ttf.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font: 16px/1.5 "OPTIAgency-Gothic", Verdana, sans-serif;
+  letter-spacing: 3px;
+}
+body,
+button,
+input,
+select,
+option {
+  font: inherit;
+}
+a {
+  text-decoration: none;
+  color: #369;
+}
+
+h1,
+h2 {
+  font-family: "impossible_-_0regular", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2.8em;
+}
+h2 {
+  font-size: 2.2em;
+}
+h3 {
+  font-size: 1.8em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1em;
+}

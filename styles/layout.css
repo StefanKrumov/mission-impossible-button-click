@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(to bottom, #fbdd9d, #6e441e);
+}
+.site {
+  width: 80%;
+  margin: auto;
+}
+.site-header {
+  text-align: center;
+  color: #9d1000;
+  padding: 3em;
+}
+
+.site-main {
+  text-align: center;
+}
+.site-main h3 {
+  padding-top: 0.5em;
+}
+.secret-message {
+  display: none;
+}
