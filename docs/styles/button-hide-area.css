@@ -38,3 +38,17 @@
 .button-hide-area button:focus {
   outline: transparent;
 }
+.tryAgain {
+  display: none;
+  padding: 1em 2em;
+  background-color: transparent;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  margin: 1em auto;
+  transition: background-color 0.2s ease-in;
+}
+.tryAgain:hover {
+  background-color: rgba(0, 0, 0, 0.637);
+}

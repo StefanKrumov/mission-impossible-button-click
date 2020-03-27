@@ -28,7 +28,7 @@ function pageHandler() {
       e.target.style.opacity = "0";
       e.target.style.top = `${Math.floor(Math.random() * 90)}%`;
       e.target.style.left = `${Math.floor(Math.random() * 90)}%`;
-    }, 450);
+    }, 400);
     e.target.addEventListener(
       "click",
       targetClickHandler.bind(undefined, timeoutID)
