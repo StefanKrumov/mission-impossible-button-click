@@ -2,19 +2,20 @@ function pageHandler() {
   const message = document.querySelector(".secret-message");
   const hideArea = document.querySelector(".button-hide-area");
   const targetButton = document.getElementById("button-target");
-  const hideAreaWrapper = document.querySelector(".button-area-wrapper");
   const hideAreaTitle = document.querySelector(".button-area-title");
-  targetButton.style.opacity = "0";
+  const tryAgainBtn = document.querySelector(".tryAgain");
   let clicksMissed = 0;
+
+  targetButton.style.opacity = "0";
   targetButton.style.top = `${Math.floor(Math.random() * 90)}%`;
   targetButton.style.left = `${Math.floor(Math.random() * 90)}%`;
 
   function targetClickHandler(timeoutID) {
     hideArea.removeEventListener(`mousemove`, hoverHandler);
-    hideAreaWrapper.style.display = "none";
+    hideArea.style.display = "none";
     message.style.display = "block";
-    targetButton.innerText = "SUCCESS";
-    targetButton.style.background = "radial-gradient(#44ff44, #023801)";
+    hideAreaTitle.innerText = "SUCCESS";
+    hideAreaTitle.style.color = "green";
     clearTimeout(timeoutID);
   }
 
@@ -27,7 +28,7 @@ function pageHandler() {
       e.target.style.opacity = "0";
       e.target.style.top = `${Math.floor(Math.random() * 90)}%`;
       e.target.style.left = `${Math.floor(Math.random() * 90)}%`;
-    }, 550);
+    }, 450);
     e.target.addEventListener(
       "click",
       targetClickHandler.bind(undefined, timeoutID)
@@ -43,11 +44,21 @@ function pageHandler() {
       hideArea.style.display = "none";
       hideAreaTitle.innerText = "MISSION FAILED!";
       hideAreaTitle.style.color = "red";
+      tryAgainBtn.style.display = "block";
     }
+  }
+
+  function restartGame() {
+    clicksMissed = 0;
+    hideAreaTitle.innerText = "LOCATE THE BUTTON BELOW:";
+    hideAreaTitle.style.color = "black";
+    hideArea.style.display = "block";
+    tryAgainBtn.style.display = "none";
   }
 
   hideArea.addEventListener(`mousemove`, hoverHandler);
   hideArea.addEventListener(`click`, hideAreaClickHandler);
+  tryAgainBtn.addEventListener(`click`, restartGame);
 }
 
 document.addEventListener("DOMContentLoaded", pageHandler);

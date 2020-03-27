@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to bottom, #fbdd9d, #6e441e);
+  min-height: 100vh;
 }
 .site {
   width: 80%;
